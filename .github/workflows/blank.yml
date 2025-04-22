@@ -27,5 +27,5 @@ jobs:
     - name: Use environment variables
       run: |
         echo "User is $USER"
-        echo "Office is $OFFICE"
+        echo "JWT_SECRET value is $JWT_SECRET"
         echo "Total envs loaded!"
