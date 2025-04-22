@@ -1,0 +1,5 @@
+HOME='/var/lib/jenkins'
+USER='pavan'
+LOCATION='HYD'
+AGE=25
+OFFICE='TEW'
