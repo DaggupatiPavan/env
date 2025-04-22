@@ -32,6 +32,6 @@ jobs:
 
     - name: Use environment variables
       run: |
-        echo "User is $USER"
+        echo "TIMEZONE is $TIMEZONE"
         echo "EMAIL_PASS value is $EMAIL_PASS"
         echo "Total envs loaded!"
