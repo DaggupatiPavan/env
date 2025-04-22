@@ -1,0 +1,33 @@
+name: Use Env from file.txt
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  load-env-vars:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Load env variables from file.txt
+      id: load-env
+      run: |
+        set -a
+        source file.txt
+        set +a
+        echo "HOME=$HOME" >> $GITHUB_ENV
+        echo "USER=$USER" >> $GITHUB_ENV
+        echo "LOCATION=$LOCATION" >> $GITHUB_ENV
+        echo "AGE=$AGE" >> $GITHUB_ENV
+        echo "OFFICE=$OFFICE" >> $GITHUB_ENV
+
+    - name: Use environment variables
+      run: |
+        echo "Home is $HOME"
+        echo "User is $USER"
+        echo "Location is $LOCATION"
+        echo "Age is $AGE"
+        echo "Office is $OFFICE"
