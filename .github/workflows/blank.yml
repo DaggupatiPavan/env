@@ -14,18 +14,19 @@ jobs:
 
     - name: Load and export env variables
       run: |
-        set -a
-        source file.txt
-        set +a
+        # set -a
+        # source file.txt
+        # set +a
 
-        while IFS='=' read -r key value; do
-          # Remove quotes from value if any
-          clean_value=$(echo "$value" | sed "s/^['\"]//;s/['\"]$//")
-          echo "$key=$clean_value" >> $GITHUB_ENV
-        done < file.txt
+        # while IFS='=' read -r key value; do
+        #   # Remove quotes from value if any
+        #   clean_value=$(echo "$value" | sed "s/^['\"]//;s/['\"]$//")
+        #   echo "$key=$clean_value" >> $GITHUB_ENV
+        # done < file.txt
+        cat file.txt >> $GITHUB_ENV
 
     - name: Use environment variables
       run: |
         echo "User is $USER"
-        echo "JWT_SECRET value is $JWT_SECRET"
+        echo "EMAIL_PASS value is $EMAIL_PASS"
         echo "Total envs loaded!"
