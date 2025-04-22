@@ -18,11 +18,11 @@ jobs:
         set -a
         source file.txt
         set +a
-        echo "HOME=$HOME" >> $GITHUB_ENV
-        echo "USER=$USER" >> $GITHUB_ENV
-        echo "LOCATION=$LOCATION" >> $GITHUB_ENV
-        echo "AGE=$AGE" >> $GITHUB_ENV
-        echo "OFFICE=$OFFICE" >> $GITHUB_ENV
+        # echo "HOME=$HOME" >> $GITHUB_ENV
+        # echo "USER=$USER" >> $GITHUB_ENV
+        # echo "LOCATION=$LOCATION" >> $GITHUB_ENV
+        # echo "AGE=$AGE" >> $GITHUB_ENV
+        # echo "OFFICE=$OFFICE" >> $GITHUB_ENV
 
     - name: Use environment variables
       run: |
