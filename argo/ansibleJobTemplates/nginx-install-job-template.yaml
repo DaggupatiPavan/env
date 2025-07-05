@@ -1,0 +1,16 @@
+---
+apiVersion: tower.ansible.com/v1alpha1
+kind: JobTemplate
+metadata:
+  name: nginx-install-job-template
+  namespace: default
+spec:
+  tower_auth_secret: aapaccess
+  job_template_name: nginx-install
+  job_template_project: test
+  ask_variables_on_launch: false
+  job_template_playbook: nginx.yaml
+  job_template_inventory: myinv
+  job_template_credentials: aap
+  job_template_extra_vars:
+    
