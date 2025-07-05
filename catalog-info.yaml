@@ -1,9 +1,16 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: env
+  name: demo124-techdocs
+  description: Contains the techdocs for env repo
   annotations:
+    backstage.io/kubernetes-id: env-techdocs
+    backstage.io/techdocs-ref: dir:.
     github.com/project-slug: DaggupatiPavan/env
 spec:
-  type: other
-  lifecycle: unknown
+  type: documentation
+  system: system:default/janus-idp
+  lifecycle: production
+  owner: DaggupatiPavan
+  partOf:
+    - component:default/red-hat-developer-hub
