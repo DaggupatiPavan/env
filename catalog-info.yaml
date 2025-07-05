@@ -1,16 +1,13 @@
+
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: demo124-techdocs
-  description: Contains the techdocs for env repo
+  name: env
+  description: nginx install on server
   annotations:
-    backstage.io/kubernetes-id: env-techdocs
+    backstage.io/kubernetes-id: env
     backstage.io/techdocs-ref: dir:.
-    github.com/project-slug: DaggupatiPavan/env
 spec:
-  type: documentation
-  system: system:default/janus-idp
+  type: api
   lifecycle: production
   owner: DaggupatiPavan
-  partOf:
-    - component:default/red-hat-developer-hub
